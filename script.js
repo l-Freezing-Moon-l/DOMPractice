@@ -27,7 +27,7 @@ container.appendChild(header3);
 // setAttribute seems to be a better way to do this:
 // maybe use below for when lots of style need changed?
 let h3Style = document.querySelector('.header3').style;
-h3Style.color = 'purple';
+h3Style.color = 'blue';
 
 const divBox = document.createElement('div');
 divBox.classList.add('box');
@@ -47,3 +47,28 @@ container.appendChild(divBox);
 // let divBoxStyle = document.querySelector('.box').style;
 // divBoxStyle.borderStyle = 'solid';
 // divBoxStyle.backgroundColor = 'pink';
+
+// practice even listener
+btn.addEventListener('click', function (e) {
+  console.log(e);
+});
+
+// practice callback function
+function myMap(array, callback) {
+  const myNewArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const callbackResult = callback(array[i]);
+    myNewArray.push(callbackResult); 
+  }
+
+  return myNewArray;
+}
+
+
+// This could be called like this:
+// const addedArray = myMap([1, 2, 3], (arrayNum) => {
+//   return arrayNum + 2; 
+// });
+// OR
+const addedArray = myMap([1, 2, 3], (arrayNum) => arrayNum + 2)
