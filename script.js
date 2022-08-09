@@ -55,7 +55,11 @@ btn.addEventListener('click', function (e) {
   e.target.style.background = 'blue';
 });
 
-// practice callback function
+// practice callback functions
+
+const notes = ['do', 're', 'mi', 'fa', 'so', 'la'];
+notes.forEach((note) => console.log(note));
+
 function myMap(array, callback) {
   const myNewArray = [];
 
