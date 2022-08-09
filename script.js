@@ -48,9 +48,11 @@ container.appendChild(divBox);
 // divBoxStyle.borderStyle = 'solid';
 // divBoxStyle.backgroundColor = 'pink';
 
-// practice even listener
+// practice event listener
 btn.addEventListener('click', function (e) {
-  console.log(e);
+  console.log(e); // gives info on the event itself(seems very useful)
+  console.log(e.target);
+  e.target.style.background = 'blue';
 });
 
 // practice callback function
@@ -72,3 +74,9 @@ function myMap(array, callback) {
 // });
 // OR
 const addedArray = myMap([1, 2, 3], (arrayNum) => arrayNum + 2)
+
+// event practice
+const element = document.querySelector('#myId');
+element.addEventListener('click', (event) => {
+  console.log(event.target.value);
+});
